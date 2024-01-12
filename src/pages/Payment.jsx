@@ -47,6 +47,13 @@ export default function payment() {
       // Tambahkan logika untuk proses pembayaran transfer bank
     }
   };
+
+  //RADIOBUTTON
+  const [selectedOption, setSelectedOption] = useState('red');
+
+  const handleOptionChange = (event) => {
+      setSelectedOption(event.target.value);
+  };
     
   return (
     <>
@@ -79,23 +86,37 @@ export default function payment() {
 
                             <Form.Group className='mb-1'>
                             <Form.Label>Pilih Kurir:</Form.Label>
-                            <Form.Control as="select">
-                                <option value=""></option>
-                                <option value="JNT">JNT</option>
-                                <option value="Race">Race</option>
-                            </Form.Control>
+                                <div className='d-flex flex-column'>
+
+                                <div className='d-flex justify-content-between align-items-center p-3 border w-50 rounded mb-2'>
+                                        <input type="radio" name="color" value="jnt" checked={selectedOption === 'jnt'} onChange={handleOptionChange} />    
+                                        <img src="image/logo-jnt.png" alt="ini kurir"  className='img-fluid ' style={{width:'80px', height:'40px'}}/>    
+                                        <p>Rp.4000</p>
+                                </div>
+                                <div className='d-flex justify-content-between align-items-center p-3 border w-50 rounded mb-2'>
+                                        <input type="radio" name="color" value="jne" checked={selectedOption === 'jne'} onChange={handleOptionChange} />    
+                                        <img src="image/logo-jne.png" alt="ini kurir"  className='img-fluid ' style={{width:'80px', height:'40px'}}/>    
+                                        <p>Rp.5000</p>
+                                </div>
+                                <div className='d-flex justify-content-between align-items-center p-3 border w-50 rounded mb-2'>
+                                        <input type="radio" name="color" value="sicepat" checked={selectedOption === 'sicepat'} onChange={handleOptionChange} />    
+                                        <img src="image/logo-sicepat.png" alt="ini kurir"  className='img-fluid ' style={{width:'80px', height:'40px'}}/>    
+                                        <p>Rp.6000</p>
+                                </div>
+                                </div>
                             </Form.Group>
 
                             <Form.Group controlId="paymentMethod">
                             <Form.Label>Pilih Metode Pembayaran:</Form.Label>
-                            <Form.Control as="select" onChange={handlePaymentChange} value={paymentMethod}>
-                                <option value="">Pilih Metode Pembayaran</option>
+                            <Form.Control as="select" onChange={handlePaymentChange} value={paymentMethod} >
+                                
+                                <option value="" placeholder='pilih metode pembayaran'></option>
                                 <option value="COD">Cash on Delivery (COD)</option>
                                 <option value="bankTransfer">Transfer Bank</option>
                             </Form.Control>
                             </Form.Group>
 
-                            {paymentMethod === 'bankTransfer' && (
+                            {paymentMethod === 'bank Transfer' && (
                             <div>
                                 <Form.Group controlId="accountNumber">
                                 <Form.Label>Nomor Rekening Bank:</Form.Label>
@@ -140,9 +161,9 @@ export default function payment() {
                     </div>
                     <div className="checkout-footer ">
 
-                        <Link to='/transaction-done' className='text-decoration-none'>
+                        <Link to='/order-detail' className='text-decoration-none'>
                         <div className='d-flex justify-content-end mt-3 pb-3 pe-3'>
-                                <button className='btn-checkout-cart'>Proses & Bayar
+                                <button className='btn-global2'>Proses & Bayar
                                 <FontAwesomeIcon icon={faArrowRightFromBracket} className='ms-2' />
                                 </button> 
                         </div>

@@ -11,7 +11,7 @@ import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import { Zoom } from 'react-reveal';
+import { Zoom, Fade } from 'react-reveal';
 
 export default function order() {
  
@@ -23,79 +23,75 @@ export default function order() {
         <div className="container pe-5 ps-5">
             <div className="col-md-12  ">
             <Zoom clear>
-                        
-                <div className="checkout shadow rounded text-global-color">
+                     <h3>Order Detail </h3>   
+                <div className="checkout shadow rounded text-global-color" >
                     <div className="checkout-header  " style={{backgroundColor:'#432818', color:'#ffff'}}>
-                        <div className=" text-center">
-                            <h5>Order Detail</h5>
-                        </div>
+                        
                     </div>
                     <div className="checkout-body border-bottom">
-                    <Table  className='rounded table-borderless  ' style={{}}>
-                        <thead >
-                            <tr className='text-center'>
-                            <th>Order Id</th>
-                            <th>Produk</th>
-                            <th>Nama Produk</th>
-                            <th>Jumlah</th>
-                            <th>Harga</th>
-                          
-                            </tr>
-                        </thead>
-                        <tbody className='text-global-color'>
-                            <tr className='text-center'>
-                              <td>order123</td>  
-                            <td>
-                                <div className=''>
-                                    <img className='img-fluid rounded' src="image/coffee2.jpg" alt="" style={{height: '50px', width:'50px'}} />
-                                </div>
-                            </td>
-                            <td>V60 Coffee</td>
-                            <td className='text-center'>
-                                <h6>1</h6>
-                                
-                            </td>
-                            <td>Rp.25000</td>
-                           
-                            </tr>
-                            <tr className='text-center'>
-                              <td>order123</td>  
-
-                            <td>
-                                <div className=''>
-                                    <img className='img-fluid rounded' src="image/coffee.jpg" alt="" style={{height: '50px', width:'50px'}} />
-                                </div>
-                            </td>
-                            <td>V60 Coffee</td>
-                            <td>
-                                <h6>1</h6>
-                                
-                            </td>
-                            <td>Rp.25000</td>
-                           
-                            </tr>
-                            <tr className='text-center'>
-                              <td>order123</td>  
-
-                            <td>
-                                <div className=''>
-                                    <img className='img-fluid rounded' src="image/coffee3.jpg" alt="" style={{height: '50px', width:'50px'}} />
-                                </div>
-                            </td>
-                            <td>Cappuchino</td>
-                            <td>
-                                <h6>1</h6>
-                                
-                            </td>
-                            <td>Rp.25000</td>
+                        <Table  className='rounded table-borderless  ' style={{}}>
+                            <thead >
+                                <tr className='text-center'>
+                                <th>Order Id</th>
+                                <th>Produk</th>
+                                <th>Nama Produk</th>
+                                <th>Jumlah</th>
+                                <th>Harga</th>                     
+                                </tr>
+                            </thead>
+                            <tbody className='text-global-color'>
+                                <tr className='text-center'>
+                                <td>order123</td>  
+                                <td>
+                                    <div className=''>
+                                        <img className='img-fluid rounded' src="image/coffee2.jpg" alt="" style={{height: '50px', width:'50px'}} />
+                                    </div>
+                                </td>
+                                <td>V60 Coffee</td>
+                                <td className='text-center'>
+                                    <h6>1</h6>
+                                    
+                                </td>
+                                <td>Rp.25000</td>
                             
-                            </tr>
-                        
-                        </tbody>
-                        </Table>
+                                </tr>
+                                <tr className='text-center'>
+                                <td>order123</td>  
 
-                        
-                    </div>
+                                <td>
+                                    <div className=''>
+                                        <img className='img-fluid rounded' src="image/coffee.jpg" alt="" style={{height: '50px', width:'50px'}} />
+                                    </div>
+                                </td>
+                                <td>V60 Coffee</td>
+                                <td>
+                                    <h6>1</h6>
+                                    
+                                </td>
+                                <td>Rp.25000</td>
+                            
+                                </tr>
+                                <tr className='text-center'>
+                                <td>order123</td>  
+
+                                <td>
+                                    <div className=''>
+                                        <img className='img-fluid rounded' src="image/coffee3.jpg" alt="" style={{height: '50px', width:'50px'}} />
+                                    </div>
+                                </td>
+                                <td>Cappuchino</td>
+                                <td>
+                                    <h6>1</h6>
+                                    
+                                </td>
+                                <td>Rp.25000</td>
+                                
+                                </tr>
+                            
+                            </tbody>
+                        </Table>  
+                    </div> 
+
                     <div className="checkout-footer mt-3">
                         <div className="d-flex justify-content-end p-3 border-bottom border-bottom ">
 
@@ -116,17 +112,57 @@ export default function order() {
                                 <h4 className='text-danger mt-3'>Rp.76.000</h4>
                             </div>
                         </div>
+                    </div>               
+                </div>
 
-                        <Link to='/payment' className='text-decoration-none'>
-                        <div className='d-flex justify-content-end mt-3 pb-3 pe-3'>
-                                <button className='btn-checkout-cart'>Lanjut Checkout
-                                <FontAwesomeIcon icon={faArrowRightFromBracket} className='ms-2' />
-                                </button> 
+                
+            </Zoom>
+
+            <Fade bottom>
+                <div className="col-md-12 mt-3">
+                <div className="checkout shadow rounded  " >
+                        <div className="checkout-header text-global-color " style={{backgroundColor:'#432818', color:'#ffff'}}>
+
                         </div>
-                        </Link>
+                        <div className="checkout-body border-bottom p-3 ">
+                            <h5 >Detail Pengiriman</h5>
+                            <div className='text-global-color'>
+                                <h6>Penerima: Ali</h6>
+                                <h6>Lokasi Tujuan : Rumah</h6>
+                                <h6>Alamat Penerima : Jalan Jambore 56, Jakarta Selatan</h6> 
+                                <h6>Kurir: JNE</h6>
+
+                            </div>
+
+                        </div>
+                        <div className="checkout-body  border-bottom p-3" >
+                        <h5>Detail Pembayaran</h5>
+                            <div className='text-global-color'>
+                                <h6>Metode Pembayaran : BANK Transfer</h6>
+                                <h6>Nama Rekening Tujuan : Harry Meguire</h6>
+                                <h6>BANK : BCA</h6>
+                                <h6>No. Rekening Tujuan: 1029384756</h6>
+                                <h6>Status Pembayaran: Belum dibayar</h6>
+
+                            </div>
+
+                        </div>
+                        <div className="checkout-footer mt-3">
+
+                            <Link to='/transaction-done' className='text-decoration-none'>
+                            <div className='d-flex justify-content-end mt-3 pb-3 pe-3'>
+                                    <button className='btn-global2'>Bayar
+                                    <FontAwesomeIcon icon={faArrowRightFromBracket} className='ms-2' />
+                                    </button> 
+                            </div>
+                            </Link>
+                        </div>
+
+                        
                     </div>
                 </div>
-            </Zoom>
+            </Fade>
+
             </div>
         </div>
     </section>

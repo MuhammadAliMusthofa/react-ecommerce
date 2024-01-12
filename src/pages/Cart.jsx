@@ -40,19 +40,21 @@ export default function cart() {
     <section className='mt-5 mb-5'>
         <div className="container  pe-5 ps-5">
             <div className="col-md-12">
-            <Zoom clear>
-                        
+            
+                <h3 className=''>Cart Product</h3>
+            <Zoom clear>          
                 <div className="checkout shadow rounded text-global-color">
                    
                     <div className="checkout-header  " style={{backgroundColor:'#432818', color:'#ffff'}}>
-                        <div className=" text-center">
-                            <h5>Cart </h5>
-                        </div>
+                        
                     </div>
                     <div className="checkout-body border-bottom">
                     <Table  className='rounded table-borderless  ' style={{}}>
                         <thead >
                             <tr className='text-center'>
+                            <th>
+                                <input type="checkbox" />
+                            </th>
                             <th>Produk</th>
                             <th>Nama Produk</th>
                             <th>Jumlah</th>
@@ -63,6 +65,9 @@ export default function cart() {
                         <tbody className='text-global-color'>
                             <tr className='text-center'>
                             <td>
+                                <input type="checkbox" className='mt-3' />
+                            </td>
+                            <td>
                                 <div className=''>
                                     <img className='img-fluid rounded' src="image/coffee2.jpg" alt="" style={{height: '50px', width:'50px'}} />
                                 </div>
@@ -70,13 +75,13 @@ export default function cart() {
                             <td>V60 Coffee</td>
                             <td className='text-center'>
                                 <div className="handle-counter2 rounded-phill " id="handleCounter1">
-                                    <button className="counter-minus btn btn-outline-dark border" onClick={ () =>decrementCounter()}><FontAwesomeIcon icon={faMinus} /></button>
+                                    <button className="counter-minus2 btn btn-outline-dark border" onClick={ () =>decrementCounter()}><FontAwesomeIcon icon={faMinus} /></button>
                                     <Form.Control
                                     placeholder=""
                                     type="text"
                                     value={count}
                                     />
-                                    <button className="counter-plus btn btn-dark border" onClick={incrementCounter}><FontAwesomeIcon icon={faPlus}/></button>
+                                    <button className="counter-plus2 btn btn-dark border" onClick={incrementCounter}><FontAwesomeIcon icon={faPlus}/></button>
                                 </div>
                                 
                             </td>
@@ -88,6 +93,9 @@ export default function cart() {
                             </td>
                             </tr>
                             <tr className='text-center'>
+                            <td>
+                                <input type="checkbox" className='mt-3'/>
+                            </td>
                             <td>
                                 <div className=''>
                                     <img className='img-fluid rounded' src="image/coffee.jpg" alt="" style={{height: '50px', width:'50px'}} />
@@ -96,13 +104,13 @@ export default function cart() {
                             <td>V60 Coffee</td>
                             <td>
                             <div className="handle-counter2 rounded-phill " id="handleCounter1">
-                                    <button className="counter-minus btn btn-outline-dark border" onClick={ () =>decrementCounter()}><FontAwesomeIcon icon={faMinus} /></button>
+                                    <button className="counter-minus2 btn btn-outline-dark border" onClick={ () =>decrementCounter()}><FontAwesomeIcon icon={faMinus} /></button>
                                     <Form.Control
                                     placeholder=""
                                     type="text"
                                     value={count}
                                     />
-                                    <button className="counter-plus btn btn-dark border" onClick={incrementCounter}><FontAwesomeIcon icon={faPlus}/></button>
+                                    <button className="counter-plus2 btn btn-dark border" onClick={incrementCounter}><FontAwesomeIcon icon={faPlus}/></button>
                                 </div>
                                 
                             </td>
@@ -114,6 +122,9 @@ export default function cart() {
                             </td>
                             </tr>
                             <tr className='text-center'>
+                            <td >
+                                <input type="checkbox" className='mt-3'/>
+                            </td>
                             <td>
                                 <div className=''>
                                     <img className='img-fluid rounded' src="image/coffee3.jpg" alt="" style={{height: '50px', width:'50px'}} />
@@ -122,13 +133,13 @@ export default function cart() {
                             <td>Cappuchino</td>
                             <td>
                             <div className="handle-counter2 rounded-phill " id="handleCounter1">
-                                    <button className="counter-minus btn btn-outline-dark border" onClick={ () =>decrementCounter()}><FontAwesomeIcon icon={faMinus} /></button>
+                                    <button className="counter-minus2 btn btn-outline-dark border" onClick={ () =>decrementCounter()}><FontAwesomeIcon icon={faMinus} /></button>
                                     <Form.Control
                                     placeholder=""
                                     type="text"
                                     value={count}
                                     />
-                                    <button className="counter-plus btn btn-dark border" onClick={incrementCounter}><FontAwesomeIcon icon={faPlus}/></button>
+                                    <button className="counter-plus2 btn btn-dark border" onClick={incrementCounter}><FontAwesomeIcon icon={faPlus}/></button>
                                 </div>
                                 
                             </td>
@@ -166,9 +177,9 @@ export default function cart() {
                             </div>
                         </div>
 
-                        <Link to='/alamat' className='text-decoration-none'>
+                        <Link to='/payment' className='text-decoration-none'>
                         <div className='d-flex justify-content-end mt-3 pb-3 pe-3'>
-                                <button className='btn-checkout-cart'>Lanjut Checkout
+                                <button className='btn-global2'>Lanjut Checkout
                                 <FontAwesomeIcon icon={faArrowRightFromBracket} className='ms-2' />
                                 </button> 
                         </div>

@@ -36,40 +36,41 @@ function NavbarCompo() {
     console.log(e)
   }
   return (
-    <Navbar  expand="lg" className="navbar ms-auto sticky-top ps-5 pe-5">
+    <Navbar  expand='lg' className="navbar ms-auto sticky-top ">
       <Container className=''>
-        <Navbar.Brand href="#home" className=''>
-          <img src="https://katarasa.id/img/logokatarasa1.0a598b45.png" alt="" style={{width: '60px', height:'60x', color:'white', backgroundPosition:'center center', backroundSize:'cover' }}/>
+        <Navbar.Brand href="/" className='ms-5 '>
+          <img src="image/katarasaBrand.png" alt="" style={{width: '80px', height:'100x', color:'white', backgroundPosition:'center center', backroundSize:'cover' }}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >
-          <Nav className="nav-ul  text-light ms-5">
+          <Nav className="nav-ul  text-light me-3 ">
             
-            <Nav.Link onClick={(e)=>pindahHalaman(e)} id='menu' className="nav-li">Menu</Nav.Link>
+            <Nav.Link onClick={(e)=>pindahHalaman(e)} id='menu' className="nav-li mt-2 ms-1">Menu</Nav.Link>
             
             
-            <Nav.Link onClick={(e)=>pindahHalaman(e)} id='promo' className="nav-li">Promo</Nav.Link>
+            <Nav.Link onClick={(e)=>pindahHalaman(e)} id='promo' className="nav-li mt-2">Promo</Nav.Link>
            
-            <Form className="d-flex search-form ">
+            <Form className="d-flex search-form my-auto ">
                     <Form.Control
                     type="search"
                     placeholder="Search"
-                    className="ms-4 outline-dark w-100 rounded"
+                    className="ms-3 outline-dark w-100 rounded"
                     aria-label="Search"
+                    style={{backgroundColor:'#d3d3d3'}}
                     // style={{backgroundColor:'#faedcd'}}
                     />
                     <Button variant="" className='ms-2 search-btn rounded' >
                     <FontAwesomeIcon icon={faSearch}/>
                     </Button>
                 </Form>
-                <Nav.Link className="ms-5" onClick={(e)=>pindahHalaman(e)} id='cart' >
-                <FontAwesomeIcon icon={faCartPlus} id='cart' className='text-white' style={{width:'30px', height:'25px'}} bounce/>
+                <Nav.Link className=" ms-3 my-auto" onClick={(e)=>pindahHalaman(e)} id='cart' >
+                <FontAwesomeIcon icon={faCartPlus} id='cart' className='text-white' style={{width:'30px', height:'25px'}} fade/>
                   
                 </Nav.Link>
-                <Nav.Link className="me-3 ms-3 text-white login-btn text-center" onClick={(e)=>pindahHalaman(e)} id='login' >
+                <Nav.Link className="me-2 ms-1  text-white login-btn text-center my-auto" onClick={(e)=>pindahHalaman(e)} id='login' >
                   Masuk
                 </Nav.Link>
-                <Nav.Link className="text-white register-btn text-center" onClick={(e)=>pindahHalaman(e)} id='register' >
+                <Nav.Link className="text-white register-btn text-center my-auto" onClick={(e)=>pindahHalaman(e)} id='register' >
                   Daftar
                 </Nav.Link>
             {/* <div className='me-2 mb-3'>

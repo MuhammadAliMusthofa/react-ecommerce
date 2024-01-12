@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import reactReveal from "react-reveal";
 import Fade  from 'react-reveal/Fade';
 import { Form, Button, Col, Row, Container, InputGroup } from 'react-bootstrap';
+import EditProfileContent from "../components/EditProfileContent";
+import EditPassword from "../components/EditPassword";
+
 
 export default function profile(){
    
@@ -21,7 +24,7 @@ export default function profile(){
         //form
         const [formData, setFormData] = useState({
           name: 'ali',
-          birthDate: '28 september',
+          birthDate: '28/11/2000',
           gender: 'lAKI', // Menyimpan jenis kelamin yang dipilih
           phoneNumber: '2345',
           email: 'use@mail.com',
@@ -57,7 +60,7 @@ export default function profile(){
     return(
         <>
 
-            <div className="content  mb-3 text-global-color p-3 d-flex">
+            <div className="content text-global-color p-3 d-flex">
 
               <div className=" p-1 font-weight-bold me-2 text-start"
                           style={getTabStyle('akun')}
@@ -72,77 +75,8 @@ export default function profile(){
               </div>
             </div>
 
-            {activeTab === 'akun' &&  
-                <Fade right>
-                      <div className="user-profile">
-                        
-                      <Form onSubmit={handleSubmit}>
-                          <Form.Group as={Row} className="mb-3" controlId="formName">
-                            <Form.Label column sm="2">
-                              Nama
-                            </Form.Label>
-                            <Col sm="10">
-                              <Form.Control
-                                type="text"
-                                placeholder="Masukkan nama"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                              />
-                            </Col>
-                          </Form.Group>
-
-                          <Form.Group as={Row} className="mb-3" controlId="formBirthDate">
-                            <Form.Label>
-                              Tanggal Lahir
-                            </Form.Label>
-                            <Col sm="10">
-                              <Form.Control
-                                type="date"
-                                name="birthDate"
-                                value={formData.birthDate}
-                                onChange={handleChange}
-                              />
-                            </Col>
-                          </Form.Group>
-
-                          <Form.Group as={Row} className="mb-3" controlId="formGender">
-                            <Form.Label column sm="2">
-                              Jenis Kelamin
-                            </Form.Label>
-                            <Col sm="10">
-                              <Form.Check
-                                type="radio"
-                                label="Laki-laki"
-                                name="gender"
-                                value="male"
-                                checked={formData.gender === 'male'}
-                                onChange={handleGenderChange}
-                              />
-                              <Form.Check
-                                type="radio"
-                                label="Perempuan"
-                                name="gender"
-                                value="female"
-                                checked={formData.gender === 'female'}
-                                onChange={handleGenderChange}
-                              />
-                            </Col>
-                          </Form.Group>
-
-                        
-
-                          <button type="button" class="btn btn-outline-lime me-1 mb-1">Lime</button>
-                          <Button variant="danger" onClick={handleDeleteAccount}>
-                            Hapus Akun
-                          </Button>
-                      </Form>
-                   
-
-                   
-                      </div>
-                </Fade>
-            }
+            {activeTab === 'akun' &&  <EditProfileContent/>}   
+            {activeTab === 'password' &&  <EditPassword/>}   
         </>
 
         

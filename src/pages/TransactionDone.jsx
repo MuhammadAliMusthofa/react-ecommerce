@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import {  Row, Col } from 'react-bootstrap';
 import { Container, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Bounce } from 'react-reveal';
+import { Fade } from 'react-reveal';
 
 
 
@@ -32,7 +32,7 @@ export default function payment() {
     <section className='mt-5 mb-5'>
         <div className="container pe-5 ps-5">
             <div className="col-md-12 ">
-            <Bounce yop>
+            <Fade top>
 
                 <div className="checkout shadow rounded text-global-color">
                     <div className="checkout-header  " style={{backgroundColor:'#432818', color:'#ffff'}}>
@@ -95,7 +95,7 @@ export default function payment() {
                     </div>
                     
                 </div>
-            </Bounce>
+            </Fade>
             </div>
         </div>
     </section>

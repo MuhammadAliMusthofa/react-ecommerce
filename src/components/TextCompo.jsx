@@ -4,9 +4,9 @@ const InnerComponent = () => {
   return (
     <div className='color-old'>
   
-      <h4>jual Kopi Arabika Dan Robusta untuk Bisnis</h4>
+      <h5>Jual Kopi Arabika Dan Robusta untuk Bisnis</h5>
       {/* <button className='btn btn-primary'>Hapus</button> */}
-      <p>Otten Coffee juga menyediakan informasi terkait bisnis kopi melalui kanal Youtube dan juga majalah online. Bahkan, kamu pun bisa berkonsultasi langsung melalui layanan konsultasi bisnis cafe yang ditawarkan. Memilih peralatan kopi dan mesin kopi yang tepat semuanya ada di Otten Coffee dan bisa disesuaikan dengan konsep bisnis cafe Anda. Biji kopi Arabika dan Robusta yang diracik oleh roastery Otten Coffee juga merupakan biji kopi segar untuk kualitas sajian kopi Anda.</p>
+      <p>Kata&Rasa Coffee juga menyediakan informasi terkait bisnis kopi melalui kanal Youtube dan juga majalah online. Bahkan, kamu pun bisa berkonsultasi langsung melalui layanan konsultasi bisnis cafe yang ditawarkan. Memilih peralatan kopi dan mesin kopi yang tepat semuanya ada di Otten Coffee dan bisa disesuaikan dengan konsep bisnis cafe Anda. Biji kopi Arabika dan Robusta yang diracik oleh roastery Otten Coffee juga merupakan biji kopi segar untuk kualitas sajian kopi Anda.</p>
     
     </div>
   );

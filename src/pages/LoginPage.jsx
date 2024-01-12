@@ -41,7 +41,7 @@ export default function Login() {
         <div className="container ">
             <div className="row">
                 <Zoom clear>
-                    <div className="col-md-4 mt-3 mx-auto border p-3 rounded-5 shadow login-page ">
+                    <div className="col-md-4 mt-3 mx-auto border p-3 rounded-3 shadow login-page ">
                     <div className=" text-center">
                         <img className='' src="image/coffee-bean.svg" alt="" style={{width:'110px'}}  />
 

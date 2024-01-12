@@ -38,19 +38,46 @@ export default function register() {
     <>
     <NavbarCompo className='mb-5 '/>
 
-   <section className='container1'>
+   <section className='container2 pb-3'>
         <div className="container ">
             <div className="row">
 
                <Zoom clear>
 
-                <div className="col-md-4 mt-3 mx-auto border p-3 rounded-5 shadow login-page ">
-                <div className=" text-center">
+                <div className="col-md-4 mt-3 mx-auto border p-3 rounded-3 shadow login-page ">
+                <div className=" text-center ">
                     <img className='' src="image/coffee-bean.svg" alt="" style={{width:'110px'}}  />
 
                 </div>
+                <h3 className=" text-center">Register</h3>
                     
-                    <h3 className=" text-center">Register</h3>
+
+                    <div className='mb-3'>
+
+                        <label htmlFor="">Nama Lengkap</label>
+                        
+                        <Form.Control
+                            placeholder="Fill with fullname"
+                            aria-label="fullname"
+                            name='fullname'
+                            type='text'
+                            className='w-100'
+                            
+                        />
+                    </div>
+                    <div className='mb-3'>
+
+                        <label htmlFor="">Nomor Handphone</label>
+                        
+                        <Form.Control
+                            placeholder="Fill with phone"
+                            aria-label="phone"
+                            name='phone'
+                            type='number'
+                            className='w-100'
+                            
+                        />
+                    </div>
                     <div className='mb-3'>
 
                         <label htmlFor="">Email</label>
@@ -93,6 +120,9 @@ export default function register() {
                             <Link className="ms-2 text-decoration-none" onClick={(e)=>pindahHalaman(e)} id='login' > Masuk</Link>
                         </div>
                 </div>
+                   
+                    
+                    
                </Zoom>
                 
             </div>

@@ -1,16 +1,35 @@
 * {
   box-sizing: border-box;
+  /* font-family: 'Poppins', sans-serif; */
   font-family: 'Poppins', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .navbar{
-  min-height:80px;
-  /* background-color: #342818; */
-  /* background-image: linear-gradient(to left, #000000, #180d0e, #271615, #361e17, #432818); */
+  min-height:30px !important;
   background-image: linear-gradient(to left, #9c6644, #8a5a3b, #794e33, #68422a, #583722, #4d2e1f, #42261b, #361e17, #2b1815, #201212, #140a0b, #000000);
 }
+
+.nav-ul{
+  margin-top:auto;
+}
+
 .nav-li{
   color:#fffF !important;
+  font-size:13px !important;
+  /* height: 30px !important; */
+  /* padding:5px; */
+  display:flex !important;
+  align-items: center !important;
+  justify-content: center;
+  /* border: 0.4px solid white !important; */
+  width:80px !important;
+  padding:5px !important;
+  /* border-radius: 10px; */
+  /* height: 15px !important; */
+  height: 30px !important;
+  font-size:13px !important;
+  
 }
 .nav-li:hover{
   color: #fffF  !important;
@@ -18,11 +37,12 @@
   background-image: linear-gradient(to right, #ddb892, #d2ac87, #c6a07d, #bb9572, #b08968);
   border-radius: 10px ;
   border: 0.5px solid white;
-
+  
 }
+
 body {
   font-family: sans-serif;
-  margin : 20px;
+  margin : 0;
   padding : 0;
 }
 
@@ -42,11 +62,17 @@ body {
 
 
 .login-btn {
+display:flex !important;
+align-items: center !important;
+justify-content: center;
 border: 0.4px solid white !important;
 width:110px !important;
-padding:10px !important;
+padding:5px !important;
 border-radius: 10px;
 /* height: 15px !important; */
+height: 30px !important;
+font-size:13px !important;
+
 }
 
 .login-btn:hover {
@@ -56,15 +82,22 @@ border-radius: 10px;
   padding:10px !important; */
   border-radius: 10px;
   /* height: 15px !important; */
+height: 30px !important;
+
 }
 
 .register-btn {
   background-image: linear-gradient(to right, #ddb892, #d2ac87, #c6a07d, #bb9572, #b08968) !important;
 color: #ffffff !important;
 width:110px !important;
-padding:10px !important;
+display:flex !important;
+align-items: center !important;
+justify-content: center;
+padding:5px !important;
 border-radius: 10px;
-/* height: 15px !important; */
+height: 30px !important;
+font-size:13px !important;
+
 }
 
 .register-btn:hover {
@@ -88,7 +121,8 @@ border-radius: 10px;
 }
 .search-form{
   width: 480px !important;
-  /* background-color: aliceblue !important; */
+  height: 35px !important;
+  /* background-color: #d3d3d3 !important; */
 }
 
 .search-btn {
@@ -130,35 +164,7 @@ border-radius: 10px;
 -moz-box-shadow: -1px -1px 5px 9px rgba(0,0,0,0.15);
 }
 
-.myButton {
-	box-shadow:inset 0px 1px 0px 0px #cc9526;
-	background:linear-gradient(to bottom, #e3bf54 5%, #7a2d04 100%);
-	background-color:#e3bf54;
-	border-radius:6px;
-	border:1px solid #8f6b00;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	/* text-shadow:0px 1px 0px #999999; */
-}
-.myButton:hover {
-	background:linear-gradient(to bottom, #7a2d04 5%, #e3bf54 100%);
-	background-color:#7a2d04;
-}
-.myButton:active {
-	position:relative;
-	top:2px;
-}
 
-.animasi {
-  animation: bounce 2s infinite;
-  
-}
 
 @keyframes bounce {
   0%, 100% {
@@ -199,9 +205,9 @@ border-radius: 10px;
 .handle-counter2 input {
   float: var(--float-left);
   text-align: center;
-  height: 41px;
+  height: 35px;
   border-radius: 0;
-  width: 130px;
+  width: 80px;
   border: 1px solid #ededf5;
   outline: none;
   border-inline-start: 0;
@@ -209,8 +215,19 @@ border-radius: 10px;
 }
 
 
+
 .handle-counter .btn {
   padding: 8px 10px !important;
+}
+
+.counter-minus2.btn {
+  padding: 6px 10px !important;
+  
+}
+.counter-plus2.btn {
+  padding: 6px 10px !important;
+  background-color: #432818;
+  color: white;
 }
 
 .handle-counter input {
@@ -262,6 +279,7 @@ border-radius: 10px;
 
 .product-button-cart{
   background-image: linear-gradient(to right, #ddb892, #d2ac87, #c6a07d, #bb9572, #b08968) !important;
+  font-size:13px !important;
 }
 
 .multi-line-ellipsis {
@@ -283,8 +301,8 @@ border-radius: 10px;
 }
 
 .fixed-card{
-  min-height:380px ;
-  max-height:380px ;
+  min-height:330px ;
+  max-height:330px ;
   border-image: linear-gradient(to right, #ddb892, #d2ac87, #c6a07d, #bb9572, #b08968) !important;
 
 }
@@ -438,6 +456,14 @@ border-radius: 10px;
   width:100%;
   /* background-color: rgba(255, 255, 255, 0.5); */
 }
+.container2 {
+  background-image: url('https://katarasa.id/img/bg1.21a5567d.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width:100%;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+}
 
 .login-page {
  background-color: white;
@@ -460,7 +486,79 @@ border-radius: 10px;
   max-height: 290px;
 }
 
+.card-gg1 {
+  flex: 0 0 18%; /* Menyesuaikan lebar card */
+  padding:10px;
+  background-color: #ffff; /* Warna latar belakang card */
+  /* border: 1px solid #ced4da; Garis border card */
+  border-radius: 5px; /* Sudut card */ 
+  min-height: 260px;
+  max-height: 260px;
+}
 
+@media (max-width: 926px) {
+  .navbar {
+    position: static;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .nav-li {
+    padding: 10px 15px;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 926px) {
+  .kategori .card {
+    width: 70px; /* Mengatur lebar kartu menjadi 80px */
+    height: 30px;
+     /* Mengatur tinggi kartu menjadi 40px */
+  }
+
+  .kategori{
+    font-size: 10px !important;
+  }
+  
+  .kategori .card-body {
+    padding: 5px !important;
+    margin-bottom: 10px !important; /* Mengurangi padding pada card-body jika diperlukan */
+  }
+
+  .kategori .card-body img {
+    height: 20px !important; /* Menyesuaikan lebar gambar */
+  }
+
+  .card-gg {
+    flex: 0 0 18%; /* Menyesuaikan lebar card */
+    padding:10px;
+    background-color: #ffff; /* Warna latar belakang card */
+    /* border: 1px solid #ced4da; Garis border card */
+    border-radius: 5px; /* Sudut card */ 
+    min-height: 180px;
+    max-height: 180px;
+    width: 169px;
+
+  }
+
+  .card-gg .image img{
+    height: 50px !important;
+  }
+
+  .card-gg p{
+    font-size: 12px !important;
+  }
+
+  .card-gg .title-product{
+    margin-bottom: 0 !important;
+  }
+  
+}
 
 
 
